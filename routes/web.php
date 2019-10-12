@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('backlog', function () {
     return view('backlog/backlog');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
