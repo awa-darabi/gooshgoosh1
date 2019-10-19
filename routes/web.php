@@ -15,9 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('backlog', function () {
-    return view('backlog/backlog');
-});
+// Route::get('backlog', function () {
+//     return view('backlog/backlog');
+// });
+Route::get('/backlog', 'BacklogController@index')->name('backlog')->middleware('auth');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

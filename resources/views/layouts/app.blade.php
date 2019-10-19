@@ -39,7 +39,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="">{{ __('BackLog') }}</a>
+                            <a class="nav-link" href="{{ route('backlog') }}">{{ __('BackLog') }}</a>
                         </li>
                     </ul>
 
