@@ -4,12 +4,12 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBacklogTable extends Migration
+class CreateTasksTable extends Migration
 {
 
     public function up()
     {
-        Schema::create('backlog', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('who');
@@ -21,9 +21,8 @@ class CreateBacklogTable extends Migration
             $table->smallInteger('currentStatus');
         });
     }
-
     public function down()
     {
-        Schema::dropIfExists('backlog');
+        Schema::dropIfExists('tasks');
     }
 }
